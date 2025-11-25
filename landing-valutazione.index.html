@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valutazione immobile a Modena - Gualdi Immobiliare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Vendere casa a Modena senza rischi né sorprese. Ottieni una valutazione professionale del tuo immobile in 48 ore con Gualdi Immobiliare."
+  />
+  <style>
+    :root {
+      --bg: #020617;        /* blu molto scuro */
+      --bg-inner: #020617;
+      --bg-card: #020617;
+      --primary: #f9fafb;
+      --accent: #facc15;    /* oro */
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius: 14px;
+      --shadow: 0 14px 30px rgba(15, 23, 42, 0.7);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 12px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .logo-img {
+      height: 140px;             /* LOGO ANCORA PIÙ GRANDE */
+      width: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
+    }
+
+    .top-badge {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: right;
+      max-width: 260px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3.1fr) minmax(0, 2.9fr);
+      gap: 32px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-badge { text-align: left; max-width: none; }
+    }
+
+    .hero-left h1 {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .hero-left h1 span.accent { color: var(--accent); }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .hero-pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #1f2937;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #111827;
+      font-weight: 600;
+      font-size: 0.96rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 26px rgba(0, 0, 0, 0.8);
+      background: #eab308;
+    }
+
+    .btn-primary span.icon {
+      margin-left: 6px;
+      font-size: 1.1rem;
+    }
+
+    .hero-microcopy {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* CARD FORM NELLA HERO */
+    .hero-right {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 20px 22px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    .form-header {
+      margin-bottom: 12px;
+    }
+
+    .form-badge {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .form-title {
+      font-weight: 600;
+      font-size: 1.03rem;
+      margin-bottom: 2px;
+      color: var(--primary);
+    }
+
+    .form-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    form {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      margin-top: 4px;
+      padding: 8px 9px;
+      border-radius: 10px;
+      border: 1px solid #1f2937;
+      font-size: 0.86rem;
+      outline: none;
+      transition: border 0.08s ease, box-shadow 0.08s ease;
+      font-family: inherit;
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.3);
+      background: #020617;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-top: 4px;
+      font-size: 0.8rem;
+    }
+
+    .checkbox-group label {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+      margin-right: 4px;
+    }
+
+    .btn-submit {
+      margin-top: 4px;
+      width: 100%;
+    }
+
+    .form-note {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .form-note strong {
+      color: #f9fafb;
+    }
+
+    .form-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      gap: 6px;
+    }
+
+    .form-safe {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .form-badge-mini {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    /* PROFILO FABRIZIO NELLA COLONNA SINISTRA */
+    .hero-profile {
+      margin-top: 22px;
+      padding: 14px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.8);
+      max-width: 380px;
+    }
+
+    .hero-profile h3 {
+      font-size: 0.96rem;
+      margin-bottom: 2px;
+      color: var(--accent);
+    }
+
+    .hero-profile span.role {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .hero-profile p {
+      font-size: 0.82rem;
+      margin-top: 8px;
+      color: #e5e7eb;
+    }
+
+    .hero-profile-img-wrap {
+      margin-top: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(250, 204, 21, 0.7);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-profile-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .section > p.lead {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 840px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius);
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
+    }
+
+    .card h3 {
+      font-size: 0.96rem;
+      margin-bottom: 4px;
+      color: var(--primary);
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+
+    .card-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .card-badge-negative,
+    .card-badge-positive {
+      display: inline-block;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      padding: 3px 8px;
+      margin-bottom: 6px;
+    }
+
+    .card-badge-negative {
+      color: #fecaca;
+      background: rgba(127, 29, 29, 0.5);
+      border: 1px solid #fecaca;
+    }
+
+    .card-badge-positive {
+      color: #bbf7d0;
+      background: rgba(22, 101, 52, 0.5);
+      border: 1px solid #bbf7d0;
+    }
+
+    .timeline {
+      border-left: 2px solid #1f2937;
+      margin-top: 8px;
+      padding-left: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 18px;
+      padding-bottom: 10px;
+      margin-left: 4px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -7px;
+      top: 2px;
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: #020617;
+      border: 2px solid var(--accent);
+    }
+
+    .timeline-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--primary);
+    }
+
+    .timeline-text {
+      font-size: 0.82rem;
+      color: #e5e7eb;
+    }
+
+    .about-text {
+      max-width: 720px;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 840px) {
+      .reviews { grid-template-columns: 1fr; }
+    }
+
+    .review-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius);
+      padding: 14px 14px 12px;
+      border: 1px solid var(--border);
+      font-size: 0.82rem;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+    }
+
+    .review-stars {
+      color: #facc15;
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+    }
+
+    .review-text { color: #e5e7eb; margin-bottom: 8px; }
+
+    .review-name {
+      font-weight: 500;
+      color: var(--primary);
+      font-size: 0.82rem;
+    }
+
+    .review-location {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .cta-final { text-align: center; }
+
+    .cta-final p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .cta-final .btn-primary {
+      padding-left: 26px;
+      padding-right: 26px;
+      margin-bottom: 8px;
+    }
+
+    .cta-subnote {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .whatsapp-box {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: rgba(22, 101, 52, 0.18);
+      border: 1px solid #22c55e;
+      font-size: 0.84rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .whatsapp-box strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #bbf7d0;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #22c55e;
+      color: #022c22;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 4px;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.7);
+    }
+
+    .whatsapp-btn span.icon { font-size: 1.1rem; }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px solid #1f2937;
+      font-size: 0.76rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-wrap">
+        <!-- LOGO VETROFANIA, PIÙ GRANDE E CLICCABILE -->
+        <a href="https://www.gualdiimmobiliare.it" class="logo-link" target="_blank" rel="noopener noreferrer">
+          <img src="gualdi-vetrofania.png" alt="Gualdi Immobiliare" class="logo-img" />
+        </a>
+      </div>
+      <div class="top-badge">
+        Sono Fabrizio Gualdi, ti aiuto a vendere casa a Modena senza svenderla né perdere mesi.
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>
+          Vendere casa a <span class="accent">Modena</span> senza prendere fregature.
+        </h1>
+        <p class="hero-subtitle">
+          Ti preparo una valutazione reale in 48 ore e ti dico subito come stanno le cose:
+          prezzo, tempi e margine di trattativa. Senza promesse da bancarella.
+        </p>
+        <div class="hero-points">
+          <div class="hero-pill">Dati reali su Modena e provincia</div>
+          <div class="hero-pill">Numeri spiegati, non sparati</div>
+          <div class="hero-pill">Nessun obbligo di incarico</div>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#form" class="btn-primary">
+            Richiedi la valutazione gratuita
+            <span class="icon">→</span>
+          </a>
+          <span class="hero-microcopy">
+            Ti rispondo personalmente entro poche ore (giorni lavorativi).
+          </span>
+        </div>
+
+        <!-- FOTO + PRESENTAZIONE NEL PUNTO CERCHIATO -->
+        <div class="hero-profile">
+          <h3>Fabrizio Gualdi</h3>
+          <span class="role">Gualdi Immobiliare – Vendita immobili residenziali a Modena</span>
+          <p>
+            Lavoro ogni giorno su Modena, quartiere per quartiere. Preferisco dirti subito
+            se una cifra è fuori mercato piuttosto che farti perdere mesi con annunci che non
+            chiamano. Numeri reali, zero fumo, strategia chiara.
+          </p>
+          <div class="hero-profile-img-wrap">
+            <img src="hero-gualdi-modena.png" alt="Fabrizio Gualdi davanti al Duomo di Modena" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SOLO FORM A DESTRA -->
+      <aside class="hero-right" id="form">
+        <div class="form-header">
+          <div class="form-badge">Richiesta valutazione</div>
+          <div class="form-title">Lasciami i dati del tuo immobile</div>
+          <div class="form-sub">
+            Ti ricontatto io, senza call center o segreterie.
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <form id="leadForm">
+          <div>
+            <label for="nome">Nome e cognome</label>
+            <input id="nome" name="nome" type="text" placeholder="Es. Mario Rossi" required />
+          </div>
+          <div>
+            <label for="telefono">Telefono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="Es. 333 1234567" required />
+          </div>
+          <div>
+            <label for="email">Email (se vuoi)</label>
+            <input id="email" name="email" type="email" placeholder="Es. mario@email.it" />
+          </div>
+          <div>
+            <label for="zona">Indirizzo / zona dell’immobile</label>
+            <textarea id="zona" name="zona" placeholder="Es. Modena, San Faustino, trilocale, secondo piano"></textarea>
+          </div>
+          <div>
+            <label for="tipologia">Tipologia immobile</label>
+            <select id="tipologia" name="tipologia">
+              <option value="">Seleziona</option>
+              <option>Appartamento</option>
+              <option>Casa indipendente</option>
+              <option>Villetta a schiera</option>
+              <option>Attico / mansarda</option>
+              <option>Altro</option>
+            </select>
+          </div>
+          <div>
+            <label for="piano">Piano</label>
+            <select id="piano" name="piano">
+              <option value="">Seleziona</option>
+              <option>Piano terra</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5 e oltre</option>
+            </select>
+          </div>
+          <div>
+            <label for="mq">Mq commerciali (circa)</label>
+            <input id="mq" name="mq" type="number" min="0" step="1" placeholder="Es. 95" />
+          </div>
+          <div>
+            <label for="stato">Stato dell’immobile</label>
+            <select id="stato" name="stato">
+              <option value="">Seleziona</option>
+              <option>Da ristrutturare</option>
+              <option>Discreto</option>
+              <option>Buono</option>
+              <option>Ottimo</option>
+              <option>Ristrutturato / nuovo</option>
+            </select>
+          </div>
+          <div>
+            <label for="ascensore">Ascensore</label>
+            <select id="ascensore" name="ascensore">
+              <option value="">Seleziona</option>
+              <option>Sì</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div>
+            <label>Pertinenze (puoi selezionarne più di una)</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="pertinenze" value="Garage" /> Garage</label>
+              <label><input type="checkbox" name="pertinenze" value="Cantina" /> Cantina</label>
+              <label><input type="checkbox" name="pertinenze" value="Soffitta" /> Soffitta</label>
+              <label><input type="checkbox" name="pertinenze" value="Giardino" /> Giardino</label>
+            </div>
+          </div>
+          <div>
+            <label for="situazione">Situazione vendita</label>
+            <select id="situazione" name="situazione">
+              <option value="">Seleziona</option>
+              <option>Voglio vendere entro 12 mesi</option>
+              <option>Ho già l’immobile in vendita</option>
+              <option>In futuro potrei vendere</option>
+              <option>Sto solo valutando per adesso</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary btn-submit">
+            Invia richiesta di valutazione
+          </button>
+
+          <p class="form-note">
+            Ti do una valutazione sincera e argomentata.
+            <strong>Nessuno ti obbliga a firmare un incarico con me.</strong>
+          </p>
+        </form>
+
+        <div class="form-bottom">
+          <div class="form-safe">
+            <span class="dot"></span>
+            <span>I tuoi dati non li giro a nessuno, li gestisco solo io.</span>
+          </div>
+          <div class="form-badge-mini">
+            Prima risposta di solito entro<br />24–48 ore lavorative.
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SEZIONI TESTI -->
+    <section class="section">
+      <h2>Il problema non è “vendere casa”. È venderla al prezzo giusto.</h2>
+      <p class="lead">
+        A Modena vedo ogni giorno due errori: annunci fuori prezzo che restano online mesi,
+        e immobili svenduti per fretta o perché nessuno ha spiegato bene i numeri al proprietario.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-badge-negative">Prezzo troppo alto</div>
+          <h3>Mesi di annuncio fermo</h3>
+          <p>
+            L’immobile gira su portali e social, ma nessuno chiama. Dopo qualche mese tutti pensano
+            che ci sia qualcosa che non va e finisci a tagliare il prezzo a caso.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-badge-negative">Prezzo troppo basso</div>
+          <h3>Soldi che non tornano più</h3>
+          <p>
+            Senza dati di zona e un confronto serio, puoi lasciare sul tavolo
+            migliaia di euro. Una volta firmato il compromesso, è finita.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-badge-positive">Prezzo corretto</div>
+          <h3>Vendita più rapida e pulita</h3>
+          <p>
+            Un prezzo ragionato, spiegato e difendibile attira acquirenti seri,
+            genera visite mirate e ti permette di negoziare da una posizione di forza.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Cosa ti porto sul tavolo con la mia valutazione</h2>
+      <p class="lead">
+        Non è un numero buttato lì per prendermi l’incarico. È un’analisi concreta sul tuo immobile,
+        su Modena e su quello che si è realmente venduto in zona.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-label">01</div>
+          <h3>Valore reale del tuo immobile</h3>
+          <p>
+            Confronto con venduto recente, stato dell’appartamento, piano, contesto.
+            Ti do una forbice di prezzo sensata, non da “sogno”.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-label">02</div>
+          <h3>Piano di vendita chiaro</h3>
+          <p>
+            Ti spiego come posizionare l’immobile, a chi ci rivolgiamo e che tipo
+            di comunicazione faremo per arrivare agli acquirenti giusti.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-label">03</div>
+          <h3>Gestione completa, se decidi di affidarti a me</h3>
+          <p>
+            Foto, documenti, visite, filtraggio curiosi, trattativa: se vuoi,
+            mi occupo io di tutto e tu non devi impazzire dietro a mille telefonate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Come funziona, senza giri di parole</h2>
+      <p class="lead">
+        Ti do una valutazione e un piano di vendita concreti. Se ti torna, andiamo avanti.
+        Se non ti convince, almeno hai le idee più chiare.
+      </p>
+
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">1. Mi lasci i dati dell’immobile</div>
+            <div class="timeline-text">
+              Compili il form o mi scrivi su WhatsApp con indirizzo, tipologia,
+              metri e qualche informazione di base.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">2. Analisi su Modena e sulla zona</div>
+            <div class="timeline-text">
+              Controllo cosa si è venduto davvero nei dintorni, comparo il tuo immobile
+              con casi simili e considero pro e contro (piano, stato, contesto).
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">3. Ti richiamo entro 48 ore</div>
+            <div class="timeline-text">
+              Ti espongo la valutazione, la motivazione del prezzo e i possibili scenari:
+              tempistiche realistiche e margine di trattativa.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">4. Decidi tu che strada prendere</div>
+            <div class="timeline-text">
+              Puoi usare la valutazione come riferimento oppure affidarmi la vendita.
+              Nessuna firma “al buio”, nessuna pressione.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO + RECENSIONI REALI -->
+    <section class="section">
+      <div class="about-text">
+        <h2>Chi sono e come lavoro</h2>
+        <p class="lead">
+          Non sono una piattaforma online anonima. Sono un agente che ci mette la faccia
+          e lavora tutti i giorni su Modena, quartiere per quartiere.
+        </p>
+        <p style="font-size:0.9rem; color:#e5e7eb; margin-bottom:10px;">
+          Mi chiamo <strong>Fabrizio Gualdi</strong> e con Gualdi Immobiliare seguo
+          proprietari che vogliono vendere casa in modo serio, senza illusioni e senza
+          perdere mesi dietro a prezzi inventati. Preferisco dirti subito se una cifra
+          è fuori mercato, anche se è scomodo, piuttosto che farti perdere tempo.
+        </p>
+        <p style="font-size:0.9rem; color:#e5e7eb;">
+          L’obiettivo è semplice: <strong>vendere il tuo immobile al giusto prezzo,
+          nel minor tempo possibile, con il minimo sbatti per te</strong>.
+        </p>
+      </div>
+
+      <div class="section" style="margin-top:26px;">
+        <h2>Cosa dicono i proprietari che hanno lavorato con me</h2>
+        <div class="reviews">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              Ho avuto molte esperienze con agenzie immobiliari, ma questa volta devo proprio
+              fare una recensione perché se lo merita. Il dott. Fabrizio mi ha seguito in tutti
+              i passi, dalla ricerca di immobili alla vendita, in modo sbalorditivo senza essere
+              opprimente. Peccato non esistano le 6 stelle.
+            </p>
+            <div class="review-name">Christian R.</div>
+            <div class="review-location">Cliente vendita & ricerca immobile</div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              Mi sono rivolto a Gualdi Immobiliare per la ricerca di un negozio di ampia metratura
+              e ho trovato in Fabrizio un professionista serio ed affidabile che mi ha assistito
+              in modo estremamente professionale, riuscendo con molta pazienza e tatto a smussare
+              alcune divergenze e difficoltà che erano insorte. Consiglio caldamente l’agenzia
+              e il titolare Fabrizio.
+            </p>
+            <div class="review-name">Giorgio U.</div>
+            <div class="review-location">Cliente ricerca negozio</div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              Ringrazio il dott. Fabrizio Gualdi dell’agenzia Gualdi Immobiliare per aver svolto
+              un lavoro proficuo che mi ha permesso di acquistare un appartamento, dimostrando
+              competenza, serietà e concretezza.
+            </p>
+            <div class="review-name">Giovanni B.</div>
+            <div class="review-location">Cliente acquisto appartamento</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINALE + WHATSAPP -->
+    <section class="section cta-final">
+      <h2>Vuoi sapere quanto vale davvero il tuo immobile?</h2>
+      <p>
+        Compila il form in alto oppure scrivimi direttamente: ti do una valutazione
+        ragionata e ti dico chiaramente cosa puoi aspettarti se decidi di vendere.
+      </p>
+      <a href="#form" class="btn-primary">
+        Richiedi ora la valutazione
+        <span class="icon">→</span>
+      </a>
+      <div class="cta-subnote">
+        Nessun impegno, nessuna firma al primo incontro. Prima capiamo i numeri, poi decidi tu.
+      </div>
+
+      <div class="whatsapp-box">
+        <strong>Vuoi fare prima e andare dritto al punto?</strong>
+        Inviami 3–4 foto dell’immobile e, se l’hai, la planimetria direttamente su WhatsApp.
+        <a
+          href="https://wa.me/393289693909"
+          class="whatsapp-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon">🟢</span>
+          Scrivimi su WhatsApp
+        </a>
+        <span style="font-size:0.78rem; color:#bbf7d0;">
+          Di solito rispondo entro poche ore nei giorni lavorativi.
+        </span>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        © <span id="year"></span> Gualdi Immobiliare – Modena.
+      </div>
+      <div>
+        <a href="#">Privacy policy</a> · <a href="#">Cookie policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+<script>
+// ENDPOINT FORM
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mpweypda";
+
+// NUMERO WHATSAPP FORMATO INTERNAZIONALE SENZA +
+const WHATSAPP_NUMBER = "393289693909";
+
+// GESTIONE FORM
+const form = document.getElementById("leadForm");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const nome = formData.get("nome") || "";
+  const telefono = formData.get("telefono") || "";
+  const email = formData.get("email") || "";
+  const zona = formData.get("zona") || "";
+  const tipologia = formData.get("tipologia") || "";
+  const piano = formData.get("piano") || "";
+  const mq = formData.get("mq") || "";
+  const stato = formData.get("stato") || "";
+  const ascensore = formData.get("ascensore") || "";
+  const situazione = formData.get("situazione") || "";
+
+  // Pertinenze multiple
+  const pertinenze = formData.getAll("pertinenze").join(", ") || "Nessuna";
+
+  // 1) INVIO MAIL TRAMITE FORMSPREE
+  await fetch(FORMSPREE_ENDPOINT, {
+    method: "POST",
+    body: JSON.stringify({
+      nome, telefono, email, zona, tipologia, piano, mq,
+      stato, ascensore, pertinenze, situazione
+    }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+
+  // 2) MESSAGGIO WHATSAPP AUTOMATICO
+  const whatsappMessage = encodeURIComponent(
+    `Richiesta valutazione immobile:\n
+👤 Nome: ${nome}
+📞 Telefono: ${telefono}
+📧 Email: ${email || "non indicata"}
+
+📍 Zona: ${zona}
+🏡 Tipologia: ${tipologia}
+🧱 Piano: ${piano}
+📐 MQ commerciali: ${mq}
+🏗 Stato immobile: ${stato}
+🛗 Ascensore: ${ascensore}
+📦 Pertinenze: ${pertinenze}
+
+📌 Situazione: ${situazione}
+    `
+  );
+
+  const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
+
+  window.open(whatsappURL, "_blank");
+
+  // 3) MESSAGGIO DI CONFERMA A SCHERMO
+  alert("Richiesta inviata correttamente! Ti rispondo entro 24-48 ore.");
+  
+  // Reset form
+  form.reset();
+});
+</script>
+
+</body>
+</html>
