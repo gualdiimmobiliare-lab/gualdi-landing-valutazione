@@ -812,6 +812,30 @@
       font-size: 1.1rem;
     }
 
+    /* GEO TAG UFFICIO */
+
+    .geo-tag-ufficio {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 6px 0 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(250, 204, 21, 0.6);
+      background: rgba(250, 204, 21, 0.08);
+      color: #fefce8;
+      font-size: 0.78rem;
+    }
+
+    .geo-tag-ufficio a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .geo-tag-ufficio a:hover {
+      text-decoration: underline;
+    }
+
     /* FOOTER */
 
     footer {
@@ -883,7 +907,6 @@
         <!-- FOTO SITUAZIONE LAVORATIVA -->
         <div class="hero-working-photo">
           <div class="hero-working-photo-img-wrap">
-            <!-- Qui metti la foto in ufficio con i clienti -->
             <img src="gualdi-ufficio.png" alt="Incontro di valutazione immobiliare in ufficio con il proprietario" />
           </div>
           <div class="hero-working-photo-title">
@@ -1206,23 +1229,18 @@
     <section class="section">
       <div class="about-layout">
         <div class="about-text">
-          <h2>Chi sono e come lavoro</h2><h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
-    Chi sono e come lavoro
-</h2>
+          <h2>Chi sono e come lavoro</h2>
 
-<!-- GEO TAG UFFICIO -->
-<div class="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-400/40 bg-emerald-500/10 text-emerald-200 text-sm">
-  <span>📍</span>
-  <a
-    href="https://www.google.com/maps/place/Via+Giovanni+Battista+Morgagni,+18,+41125+Modena+MO/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="underline-offset-2 hover:underline"
-  >
-    Ufficio: Via G. B. Morgagni 18, Modena
-  </a>
-</div>
-<!-- FINE GEO TAG -->
+          <div class="geo-tag-ufficio">
+            <span>📍</span>
+            <a
+              href="https://www.google.com/maps/place/Via+Giovanni+Battista+Morgagni,+18,+41125+Modena+MO/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ufficio: Via G. B. Morgagni 18, Modena
+            </a>
+          </div>
 
           <p class="lead">
             Non sono una piattaforma online anonima: sono un agente immobiliare che ci mette la faccia
@@ -1248,7 +1266,6 @@
             e una strategia di vendita costruita sul tuo caso specifico, non su schemi generici.
           </p>
           <div class="hero-profile-img-wrap">
-            <!-- Qui puoi usare la foto sulla Ghirlandina o un ritratto più “da curriculum” -->
             <img src="hero-gualdi-modena.png" alt="Dott. Fabrizio Gualdi a Modena" />
           </div>
         </div>
